@@ -17,13 +17,13 @@ typedef void (^TSMarkdownParserMatchBlock)(NSTextCheckingResult *match, NSMutabl
 /**
  Default attributes for `attributedStringFromMarkdown:`.
  */
-@property (nonatomic, strong, nullable) NSDictionary<NSString *, id> *defaultAttributes;
+@property (nonatomic, strong, nullable) NSDictionary<NSAttributedStringKey, id> *defaultAttributes;
 
 /// Applies defaultAttributes then markdown
 - (NSAttributedString *)attributedStringFromMarkdown:(NSString *)markdown;
 
 /// Applies attributes then markdown
-- (NSAttributedString *)attributedStringFromMarkdown:(NSString *)markdown attributes:(nullable NSDictionary<NSString *, id> *)attributes;
+- (NSAttributedString *)attributedStringFromMarkdown:(NSString *)markdown attributes:(nullable NSDictionary<NSAttributedStringKey, id> *)attributes;
 
 /// Applies markdown
 - (NSAttributedString *)attributedStringFromAttributedMarkdownString:(NSAttributedString *)attributedString;
